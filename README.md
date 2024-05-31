@@ -1,4 +1,7 @@
-# XTIMES Backend
+# XTIMES
+
+Extension code:
+https://github.com/cointimes-app/xtimes-extension
 
 ## How We Maintain Data Privacy
 
@@ -8,13 +11,13 @@
 2. **Two-Stage Data Collection**
    - User data is collected in two different stages to ensure anonymity.
 
-3. **Anonymous Data Transmission to AI**
-   - The extension anonymously sends the titles of the user's recent browser history without any association to the user.
-   - The artificial intelligence processes this data and provides insights to the client.
+    2.1. **Anonymous Data Transmission to AI**
+       - The extension anonymously sends the titles of the user's recent browser history without any association to the user.
+       - The artificial intelligence processes this data and provides insights to the client.
 
-4. **Saving Insights and Payment with XTIMES**
-   - With the AI-generated insights, the extension calls an endpoint to save these insights associated with the user.
-   - Payment for the data is made through a pool system to ensure anonymity.
+    2.2. **Saving Insights and Payment with XTIMES**
+       - With the AI-generated insights, the extension calls an endpoint to save these insights associated with the user.
+       - Payment for the data is made through a pool system to ensure anonymity.
 
 5. **Pool System to Ensure Anonymity**
    - All deposits into the pool are of the same amount, and it is possible to create multiple pools.
@@ -41,7 +44,13 @@
 ## Database models
 <img width="1149" alt="Database models" src="https://github.com/cointimes-app/xtimes-backend/assets/12894905/d0f97c95-05d1-4298-af8a-9e68c7ff0ced">
 
+<img width="879" alt="Captura de Tela 2024-05-31 às 11 58 52" src="https://github.com/cointimes-app/xtimes-backend/assets/12894905/4f14048d-ab31-425b-81fb-ece902dd0324">
 
+
+## Complete Solution:
+In our roadmap, we plan to develop a simplified payment method for data, where businesses can purchase user data with fiat currencies, using Anchors to convert fiat to USDC. Although we have not yet implemented the data purchasing component, it is essential for our business's functionality, with Stellar being our fundamental base.
+
+<img width="882" alt="Captura de Tela 2024-05-31 às 11 59 06" src="https://github.com/cointimes-app/xtimes-backend/assets/12894905/6b459489-7448-4d3a-9b85-3ef0e66fd2ba">
 
 
 
