@@ -4,10 +4,12 @@ namespace App\Http\Controllers;
 use App\Models\Domain;
 use App\Models\Pool;
 use App\Models\PoolLedger;
+use App\Models\PoolUser;
 use App\Models\UserProfile;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 
 class DataController extends Controller
 {
@@ -70,7 +72,12 @@ class DataController extends Controller
     public function addUserToPool($userId)
     {
         $pool = $this->getActivePool();
-        $pool->users()->attach($userId);
+
+        PoolUser::create([
+            'id'=> Str::uuid(),
+            'pool_id' => $pool->id,
+            'user_id' => $userId,
+        ]);
     }
 
     public function depositReward(float $amount)

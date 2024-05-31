@@ -12,11 +12,10 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('pool_user', function (Blueprint $table) {
-            $table->id();
+            $table->uuid('id')->primary();
             $table->foreignId('pool_id')->constrained();
             $table->foreignId('user_id')->constrained();
             $table->boolean('is_paid')->default(false);
-            $table->timestamps();
 
             $table->unique(['user_id', 'pool_id']);
         });

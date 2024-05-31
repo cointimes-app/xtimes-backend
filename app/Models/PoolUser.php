@@ -11,5 +11,11 @@ class PoolUser extends Model
 
     protected $table = 'pool_user';
 
-    protected $fillable = ['is_paid'];
+    protected $fillable = ['id','pool_id','user_id','is_paid'];
+
+    protected $keyType = 'string';
+
+    public $incrementing = false;
+
+    public $timestamps = false;
 }
